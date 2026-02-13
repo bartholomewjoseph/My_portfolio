@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Bartholomew - Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+        <div class="hero-content">
+            <h1>Joseph Bartholomew</h1>
+            <p class="hero-subtitle">Data Analyst</p>
+            <p class="hero-experience">3 Years of Experience</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Transforming Data Into Actionable Insights</p>
+            <div class="about-content">
+                <p>I am a dedicated Data Analyst with 3 years of hands-on experience in transforming raw data into actionable insights. My expertise spans across survey design and data collection using KoboToolbox, database management with SQL and PostgreSQL, data visualization with Power BI, geospatial analysis using QGIS, and advanced analytics with Python and Excel.</p>
+                <p>I am passionate about leveraging data to solve real-world problems and drive informed decision-making across various domains including healthcare, public policy, and community development.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-subtitle">Tools & Technologies I Work With</p>
+            <div class="skills-grid">
+                <div class="skill-card">KoboToolbox</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">SQL</div>
+                <div class="skill-card">Power BI</div>
+                <div class="skill-card">PostgreSQL</div>
+                <div class="skill-card">QGIS</div>
+                <div class="skill-card">Excel</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Real-World Solutions Through Data Analysis</p>
+            <div class="projects-grid">
+                
+                <!-- Project 1: NCD Survey -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Non-Communicable Disease Awareness Survey</h3>
+                    </div>
+                    <div class="project-body">
+                        <iframe 
+                            class="map-embed"
+                            src="https://ee.kobotoolbox.org/x/EP8f2364"
+                            loading="lazy">
+                        </iframe>
+                        <p>An interactive community-based health survey designed to assess awareness, risk factors, and knowledge of non-communicable diseases such as hypertension, diabetes, and cardiovascular conditions. Data was collected digitally using KoboToolbox to support evidence-based public health planning.</p>
+                        <button class="toggle-btn" onclick="toggleNCDInsights()">View Key Survey Insights</button>
+                        <div class="insights" id="ncdSurveyInsights">
+                            <ul>
+                                <li>Low awareness of NCD risk factors in rural communities</li>
+                                <li>High prevalence of lifestyle-related risk behaviors</li>
+                                <li>Clear gaps identified for targeted health education</li>
+                                <li>Survey supports policy-level decision making</li>
+                            </ul>
+                        </div>
+                        <a href="https://ee.kobotoolbox.org/x/EP8f2364" target="_blank" class="project-link">Open Full Survey →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: SQL Data Cleaning -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SQL Data Cleaning Project</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Advanced data cleaning and transformation project using SQL and PostgreSQL. This project demonstrates expertise in handling messy datasets, removing duplicates, standardizing formats, and ensuring data quality for downstream analysis.</p>
+                        <a href="https://github.com/bartholomewjoseph/-Data-CLeaning.git" target="_blank" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Kaduna GIS Microplanning -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Kaduna Microplanning GIS Project</h3>
+                    </div>
+                    <div class="project-body">
+                        <iframe 
+                            class="map-embed"
+                            src="https://felt.com/embed/map/Kaduna-Microplanning-GIS-Qjrl67WbRtmQBgjbEQnKkC?loc=7.86,8.674,5.64z">
+                        </iframe>
+                        <p>Interactive GIS microplanning map built for health and population planning. Includes wards, settlements, service points, and spatial coverage analysis.</p>
+                        <a href="https://felt.com/map/Kaduna-Microplanning-GIS-Qjrl67WbRtmQBgjbEQnKkC?share=1" target="_blank" class="project-link">Open Full Map on Felt →</a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Ward Maps Slideshow -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Supporting Microplanning with GIS & Spatial Data</h3>
+                    </div>
+                    <div class="project-body">
+                        <!-- Slideshow Container -->
+                        <div class="slideshow-container">
+                            <button class="slide-nav slide-prev" onclick="changeSlide(-1)">‹</button>
+                            <button class="slide-nav slide-next" onclick="changeSlide(1)">›</button>
+                            
+                            <div class="slide active">
+                                <img src="C:\web_page\my_portfolio\image\agban.png" alt="Agban Ward Map" id="slide1">
+                            </div>
+                            <div class="slide">
+                                <img src="C:\web_page\my_portfolio\image\bondong.png alt="Bondong Ward Map" id="slide2">
+                            </div>
+                            <div class="slide">
+                                <img src="C:\web_page\my_portfolio\image\fada.png" alt="Fada Ward Map" id="slide3">
+                            </div>
+                            <div class="slide">
+                                <img src="C:\web_page\my_portfolio\image\kadarko.png" alt="Kadarko Ward Map" id="slide4">
+                            </div>
+                            <div class="slide">
+                                <img src="C:\web_page\my_portfolio\image\kaura.png" alt="Kaura Ward Map" id="slide5">
+                            </div>
+                            <div class="slide">
+                                <img src="C:\web_page\my_portfolio\image\kpak.png" alt="Kpak Ward Map" id="slide6">
+                            </div>
+
+                            <div class="slide-controls">
+                                <span class="slide-dot active" onclick="currentSlide(0)"></span>
+                                <span class="slide-dot" onclick="currentSlide(1)"></span>
+                                <span class="slide-dot" onclick="currentSlide(2)"></span>
+                                <span class="slide-dot" onclick="currentSlide(3)"></span>
+                                <span class="slide-dot" onclick="currentSlide(4)"></span>
+                                <span class="slide-dot" onclick="currentSlide(5)"></span>
+                            </div>
+                        </div>
+
+                        <p>Using GIS and spatial data analysis to improve healthcare coverage and access to health facilities in Kaduna State, Nigeria. Evaluated settlements within a 5km buffer distance of health facilities in Takai and Sumalia LGAs, identifying population clusters lacking coverage to prioritize locations for new health facilities or temporary health posts. Designed 10 detailed ward maps for Kaura LGA using Atlas to support microplanning initiatives.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">I'm always open to discussing new projects, opportunities, or collaborations</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <a href="mailto:josephbartholomew15@gmail.com" class="contact-link">josephbartholomew15@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <a href="https://wa.me/2348155186709" target="_blank" class="contact-link">+234 815 518 6709</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💼</div>
+                    <a href="http://www.linkedin.com/in/bartholomew-joseph" target="_blank" class="contact-link">LinkedIn Profile</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💻</div>
+                    <a href="https://github.com/bartholomewjoseph" target="_blank" class="contact-link">GitHub Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Joseph Bartholomew. All Rights Reserved.</p>
+            <p>Built with passion for data and analytics</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('visible');
+            } else {
+                navbar.classList.remove('visible');
+            }
+        });
+
+        // NCD Insights Toggle
+        function toggleNCDInsights() {
+            const panel = document.getElementById("ncdSurveyInsights");
+            panel.style.display = panel.style.display === "block" ? "none" : "block";
+        }
+
+        // Slideshow functionality
+        let currentSlideIndex = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.slide-dot');
+            
+            if (index >= slides.length) currentSlideIndex = 0;
+            if (index < 0) currentSlideIndex = slides.length - 1;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[currentSlideIndex].classList.add('active');
+            dots[currentSlideIndex].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlideIndex += direction;
+            showSlide(currentSlideIndex);
+            resetSlideInterval();
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index;
+            showSlide(currentSlideIndex);
+            resetSlideInterval();
+        }
+
+        function autoSlide() {
+            currentSlideIndex++;
+            showSlide(currentSlideIndex);
+        }
+
+        function resetSlideInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(autoSlide, 7000);
+        }
+
+        // Start automatic slideshow
+        slideInterval = setInterval(autoSlide, 7000);
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
